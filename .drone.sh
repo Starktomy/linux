@@ -8,7 +8,7 @@ build)
 	export CROSS_COMPILE="$3-"
 
 	nproc && grep Mem /proc/meminfo && df -hT .
-	apk add build-base bison findutils flex gmp-dev mpc1-dev mpfr-dev openssl-dev perl "gcc-$3"
+	apk add bash build-base bison findutils flex gmp-dev mpc1-dev mpfr-dev openssl-dev perl "gcc-$3"
 
 	# Workaround problem with faccessat2() on Drone CI
 	wget https://gist.githubusercontent.com/TravMurav/36c83efbc188115aa9b0fc7f4afba63e/raw/faccessat.c -P /opt
